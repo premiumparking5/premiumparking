@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>REGISTRO</title>
+    </head>
+    <body>
+        <center><h1>REGISTRO</h1>
+        <form id="loginForm">
+        <label>Email: </label>
+        <input type="email" id="email" required>
+        <br/><br/>
+        <label>Contraseña: </label>
+        <input type="password" id="password" required>
+        <br/><br/>
+        
+        <br/><br/>
+        <button type="button" onclick="alert('redirigiendo...')">Registrarse</button>
+        </form> </center>    
+        <body background="https://images.app.goo.gl/sbvzy8GDpoMSVQE48.jpg">
+    <script>
+
+        const usuario = {
+            email: "samueherre2008@gmail.com",
+            password: "Medellin1913"
+        };
+        
+        document.getElementById("loginForm").addEventListener("submit", fuction(e) {
+            e.preventDefault();
+
+            const emailIngresado = document.getElementById("email").value;
+            const passwordIngresado = document.getElementById("password").value;
+
+            if (emailIngresado === usuario.email && passwordIngresado === usuario.password) {
+                alert("Registro existoso");
+            } else {
+                alert ("Incorrecto");
+            }
+        }); 
+
+    </script>
+
+    </body>
+ </html>
