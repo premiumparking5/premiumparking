@@ -4,9 +4,11 @@
 
     <head>
         <title>REGISTRO</title>
+        <script type="text\/javascript" src="js/jquery.js"></script>
     </head>
     <body>
-        <center><h1>REGISTRO</h1>
+        <center>
+        <h1>REGISTRO</h1>
         <form id="loginForm">
         <label>Email: </label>
         <input type="email" id="email" required>
@@ -17,7 +19,8 @@
         
         <br/><br/>
         <button type="button" onclick="alert('redirigiendo...')">Registrarse</button>
-        </form> </center>    
+        </center>
+    </form>     
         <body background="https://images.app.goo.gl/sbvzy8GDpoMSVQE48.jpg">
     <script>
 
@@ -43,3 +46,21 @@
 
     </body>
  </html>
+
+ <script>
+    $(document).ready(function() {
+        $("#loginForm").submit(function(event){
+
+            $.ajax({
+                type: "POST",
+                url: "",
+                success: fuction (valor){
+                    
+                }
+                
+            });
+        }
+            
+        
+
+ </script>
