@@ -1,46 +1,94 @@
+<!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <title>ejemplo</title>
-        <style>
-            <!DOCTYPE html>
-<html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Ejemplo con Botones</title>
-  <style>
-    .encabezado {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px;
-      background-color: #f0f0f0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú</title>
+    <style>
+        body {
+            background-color: #f7f7f7;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-    .botones {
-      display: flex;
-      gap: 10px;
-    }
+        /* Encabezado con un fondo atractivo en color azul*/
+        .encabezado {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #12a7e2; 
+            color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-    .botones button {
-      padding: 5px 10px;
-      cursor: pointer;
-    }
-  </style>
+        /* Título del encabezado */
+        .encabezado h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        /* Contenedor de botones, centrado */
+        .botones {
+            display: flex;
+            justify-content: center; /* Centrado de los botones */
+            gap: 20px;
+            width: 100%;
+        }
+
+        /* Estilo para los botones */
+        .botones button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #ffffff;
+            color: #12a7e2; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        /* Efectos de hover para los botones */
+        .botones button:hover {
+            background-color: #12a7e2;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .botones button:active {
+            transform: translateY(2px);
+        }
+
+        /* Estilo para el pie de página */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #12a7e2; 
+            color: white;
+            font-size: 14px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
 </head>
+
 <body>
 
-  <div class="encabezado">
-    <h1>...</h1>
-    <div class="botones">
-      <button>salida</button>
-      <button>menu Principal</button>
-      <button>metodos de pago</button>
+    <div class="encabezado">
+        <h1>PremiumParking</h1>
+        <!-- Aquí puedes dejar vacío si no necesitas el encabezado a la derecha -->
     </div>
-  </div>
+
+    <div class="botones">
+        <button onclick="alert('Redirigiendo a la salida...')">Salir</button>
+        <button onclick="alert('Redirigiendo al menú principal...')">Menú Principal</button>
+        <button onclick="alert('Redirigiendo a los métodos de pago...')">Métodos de Pago</button>
+    </div>
 
 </body>
-</html>
-    
-    </head>
+
 </html>
