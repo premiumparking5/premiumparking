@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ingreso de Vehículos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #6dd5fa, #2980b9);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      width: 300px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 8px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+
+    button {
+      background-color: #27ae60;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2ecc71;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Ingreso de Vehículos</h2>
+    <form>
+      <label for="placa">Placa:</label>
+      <input type="text" id="placa" name="placa" required>
+
+      <label for="tipo">Tipo de Vehículo:</label>
+      <select id="tipo" name="tipo">
+        <option value="carro">Carro</option>
+        <option value="moto">Moto</option>
+        <option value="camion">Camión</option>
+      </select>
+
+      <label for="hora">Hora de Ingreso:</label>
+      <input type="time" id="hora" name="hora" required>
+
+      <button type="submit">Registrar</button>
+    </form>
+  </div>
+
+</body>
+</html>

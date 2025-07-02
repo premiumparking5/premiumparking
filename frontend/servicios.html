@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Servicios - PremiumParking</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('imagenes/Fundadores.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #333;
+    }
+
+    /* Fondo blanco semiopaco en el contenedor para mejorar la legibilidad */
+    .container {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      border-radius: 10px;
+    }
+
+    header {
+      background-color: #0d47a1;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    .service {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+    }
+
+    .service h3 {
+      color: #0d47a1;
+      margin-top: 0;
+    }
+
+    .service p {
+      margin: 10px 0;
+    }
+
+    .service button {
+      margin-top: 10px;
+      background-color: #0d47a1;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .service button:hover {
+      background-color: #08306b;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #0d47a1;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>PremiumParking</h1>
+    <p>Tu parqueadero de confianza</p>
+  </header>
+
+  <div class="container">
+    <h2 style="text-align:center; color:#0d47a1;">Nuestros Servicios</h2>
+
+    <div class="service">
+      <h3>Parqueadero 24/7</h3>
+      <p>Disponibilidad las 24 horas, los 7 días de la semana para que estaciones sin preocupaciones.</p>
+      <button onclick="location.href='menu.html'">Reservar ahora</button>
+    </div>
+
+    <div class="service">
+      <h3>Vigilancia y Seguridad</h3>
+      <p>Circuito cerrado de cámaras, personal de seguridad y acceso controlado para tu tranquilidad.</p>
+      <button onclick="location.href='seguridad.html'">Ver detalles</button>
+    </div>
+
+    <div class="service">
+      <h3>Parqueadero Cubierto</h3>
+      <p>Espacios techados para proteger tu vehículo del sol, lluvia y otros factores climáticos.</p>
+      <button onclick="location.href='cubierto.html'">Más información</button>
+    </div>
+
+    <div class="service">
+      <h3>Carga para Vehículos Eléctricos</h3>
+      <p>Estaciones de carga disponibles para autos eléctricos, amigables con el medio ambiente.</p>
+      <button onclick="location.href='carga.html'">Ubicaciones</button>
+    </div>
+
+    <div class="service">
+      <h3>Lavado de Autos</h3>
+      <p>Servicio opcional de lavado interior y exterior mientras dejas tu vehículo.</p>
+      <button onclick="location.href='lavado.html'">Solicitar servicio</button>
+    </div>
+
+    <div class="service">
+      <h3>Reservas en Línea</h3>
+      <p>Reserva tu espacio de parqueo fácilmente desde nuestra página web o app.</p>
+      <button onclick="location.href='vehiculo.html'">Ir a reservas</button>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2025 PremiumParking. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
+
+

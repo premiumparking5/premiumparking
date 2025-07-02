@@ -1,94 +1,114 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú</title>
-    <style>
-        body {
-            background-color: #f7f7f7;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menú - PremiumParking</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-        /* Encabezado con un fondo atractivo en color azul*/
-        .encabezado {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 30px;
-            background-color: #12a7e2; 
-            color: #fff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+    body {
+      background: url('imagenes/Fundadores.jpeg') no-repeat center center fixed;
+      background-size: cover;
+    }
 
-        /* Título del encabezado */
-        .encabezado h1 {
-            font-size: 24px;
-            margin: 0;
-        }
+    .overlay {
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
 
-        /* Contenedor de botones, centrado */
-        .botones {
-            display: flex;
-            justify-content: center; /* Centrado de los botones */
-            gap: 20px;
-            width: 100%;
-        }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
 
-        /* Estilo para los botones */
-        .botones button {
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            background-color: #ffffff;
-            color: #12a7e2; 
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s, transform 0.3s;
-        }
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+    }
 
-        /* Efectos de hover para los botones */
-        .botones button:hover {
-            background-color: #12a7e2;
-            color: white;
-            transform: translateY(-2px);
-        }
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
 
-        .botones button:active {
-            transform: translateY(2px);
-        }
+    nav {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      max-width: 400px;
+    }
 
-        /* Estilo para el pie de página */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #12a7e2; 
-            color: white;
-            font-size: 14px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+    .menu-btn {
+      background-color: #0d47a1;
+      color: white;
+      padding: 15px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
+
+    .menu-btn:hover {
+      background-color: #08306b;
+    }
+
+    footer {
+      text-align: center;
+      color: #ccc;
+      margin-top: 60px;
+      font-size: 0.9em;
+    }
+
+    @media (min-width: 600px) {
+      nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .menu-btn {
+        width: 180px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-    <div class="encabezado">
-        <h1>PremiumParking</h1>
-        <!-- Aquí puedes dejar vacío si no necesitas el encabezado a la derecha -->
-    </div>
+  <div class="overlay">
+    <header>
+      <h1><font color="white">PremiumParking</font></h1>
+      <p><font color="black">Bienvenido al menú principal</font></p>
+    </header>
 
-    <div class="botones">
-        <button onclick="alert('Redirigiendo a la salida...')">Salir</button>
-        <button onclick="alert('Redirigiendo al menú principal...')">Menú Principal</button>
-        <button onclick="alert('Redirigiendo a los métodos de pago...')">Métodos de Pago</button>
-    </div>
+    <nav>
+      <button class="menu-btn" onclick="location.href='reservas.html'">Reservar Parqueadero</button>
+      <button class="menu-btn" onclick="location.href='seguridad.html'">Seguridad</button>
+      <button class="menu-btn" onclick="location.href='cubierto.html'">Parqueadero Cubierto</button>
+      <button class="menu-btn" onclick="location.href='carga.html'">Cargar Vehículo</button>
+      <button class="menu-btn" onclick="location.href='lavado.html'">Lavado de Autos</button>
+      <button class="menu-btn" onclick="location.href='contacto.html'">Contacto</button>
+    </nav>
+
+    <footer>
+      <p>&copy; 2023 PremiumParking. Todos los derechos reservados.</p>
+      <p>Desarrollado por Emanuel Patiño, Samuel Ossa, Jeronimo Arias, Stiven Castañeda. </p>
+    </footer>
+  </div>
 
 </body>
-
 </html>
