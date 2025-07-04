@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Premium Parking | Reporte de Incidentes</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f9fb;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #28a5df;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #28a5df;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 1em;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    button {
+      margin-top: 25px;
+      background-color: #28a5df;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #1c90c9;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #eee;
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Premium Parking</h1>
+    <p>🛡️ Reporte de Incidentes</p>
+  </header>
+
+  <div class="container">
+    <h2>📣 Reporta un problema</h2>
+    <form id="reporteForm">
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="categoria">Categoría del reporte</label>
+      <select id="categoria" name="categoria" required>
+        <option value="">-- Selecciona una opción --</option>
+        <option value="robo">Robo</option>
+        <option value="daños">Daños a mi vehículo</option>
+        <option value="queja">Queja sobre el servicio</option>
+        <option value="otro">Otro</option>
+      </select>
+
+      <label for="mensaje">Descripción del incidente</label>
+      <textarea id="mensaje" name="mensaje" placeholder="Describe con detalle lo ocurrido..." required></textarea>
+
+      <button type="submit">Enviar reporte</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 Premium Parking — Tu seguridad y confianza son nuestra prioridad.
+  </footer>
+
+  <script>
+    const form = document.getElementById('reporteForm');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const nombre = form.nombre.value.trim();
+      const categoria = form.categoria.value;
+      
+      if (nombre && categoria) {
+        alert("Gracias, " + nombre + ". Tu reporte ha sido enviado con éxito.");
+        form.reset();
+      } else {
+        alert("Por favor, completa todos los campos requeridos.");
+      }
+    });
+  </script>
+
+</body>
+</html>

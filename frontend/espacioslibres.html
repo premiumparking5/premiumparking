@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Parqueadero Interactivo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef2f3;
+      text-align: center;
+    }
+
+    h1 {
+      color: #2c3e50;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(5, 100px);
+      grid-gap: 15px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .slot {
+      padding: 20px;
+      border-radius: 10px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s;
+      position: relative;
+    }
+
+    .slot:hover {
+      transform: scale(1.05);
+    }
+
+    .libre {
+      background-color: #2ecc71; /* verde */
+    }
+
+    .reservado {
+      background-color: #e74c3c; /* rojo */
+      cursor: not-allowed;
+    }
+
+    .ocupado {
+      background-color: #34495e; /* gris oscuro */
+      cursor: not-allowed;
+    }
+
+    .slot span {
+      display: block;
+      font-size: 0.9em;
+    }
+
+    .slot::after {
+      content: attr(data-status);
+      position: absolute;
+      bottom: 8px;
+      left: 0;
+      width: 100%;
+      font-size: 12px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .btn-navegar {
+      margin-top: 40px;
+      padding: 12px 25px;
+      font-size: 16px;
+      background-color: #2980b9;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-navegar:hover {
+      background-color: #1f618d;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🅿️ Parqueadero Interactivo</h1>
+  <p>Haz clic en un espacio libre para reservarlo. Solo puedes reservar uno.</p>
+
+  <div class="grid" id="parkingGrid">
+    <!-- Espacios generados por JavaScript -->
+  </div>
+
+  <br/><Br/>
+
+  <nav>
+    <button class="menu-btn" onclick="location.href='facturacion.html'">Ir a la facturaciòn</button>
+  </nav>
+  
+
+  <script>
+    const rows = ['A', 'B', 'C', 'D'];
+    const cols = [1, 2, 3, 4, 5];
+
+    const grid = document.getElementById('parkingGrid');
+
+    const estadoInicial = {
+      "A2": "reservado",
+      "A4": "ocupado",
+      "B2": "reservado",
+      "B5": "ocupado",
+      "C3": "reservado",
+      "C4": "ocupado",
+      "D4": "ocupado"
+    };
+
+    let reservaRealizada = false; // Solo se permite una reserva por persona
+
+    rows.forEach(row => {
+      cols.forEach(col => {
+        const id = row + col;
+        const slot = document.createElement('div');
+        const estado = estadoInicial[id] || "libre";
+        slot.className = `slot ${estado}`;
+        slot.setAttribute("data-status", estado.charAt(0).toUpperCase() + estado.slice(1));
+        slot.textContent = id;
+
+        if (estado === "libre") {
+          slot.addEventListener("click", () => {
+            if (reservaRealizada) {
+              alert("Ya has reservado un espacio.");
+              return;
+            }
+            slot.classList.remove("libre");
+            slot.classList.add("reservado");
+            slot.setAttribute("data-status", "Reservado");
+            reservaRealizada = true;
+          });
+        }
+
+        grid.appendChild(slot);
+      });
+    });
+
+    // Función para redirigir al hacer clic en el botón
+    function irAOtraPagina() {
+      window.location.href = "https://www.ejemplo.com"; // Reemplaza con la URL deseada
+    }
+  </script>
+
+</body>
+</html>
+

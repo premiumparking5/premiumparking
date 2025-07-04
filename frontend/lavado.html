@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Premium Parking | Lavadero de Autos</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f2f2f2;
+      text-align: center;
+    }
+
+    header {
+      background-color: #111;
+      color: #28a5df;
+      padding: 30px 20px;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .info {
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      max-width: 600px;
+      border-radius: 8px;
+    }
+
+    .info h2 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin: 30px auto;
+      max-width: 600px;
+    }
+
+    .slot {
+      padding: 15px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      background-color: #2ecc71;
+      color: white;
+      transition: transform 0.2s;
+    }
+
+    .slot:hover {
+      transform: scale(1.05);
+    }
+
+    .ocupado {
+      background-color: #e74c3c;
+      cursor: not-allowed;
+    }
+
+    .slot.ocupado:hover {
+      transform: none;
+    }
+
+    footer {
+      background-color: #111;
+      color: #bbb;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Premium Parking</h1>
+    <p>LAVADERO DE AUTOS! 🧽🚗</p>
+  </header>
+
+  <div class="info">
+    <h2>🕒 Horario de Atención</h2>
+    <p>Lunes a Sábado — 8:00 AM a 6:00 PM</p>
+    <p>Domingos — Cerrado</p>
+  </div>
+
+  <div class="info">
+    <h2>📅 Reserva tu Lavado</h2>
+    <p>Selecciona un horario disponible:</p>
+    <div class="grid" id="horarioGrid">
+      <!-- Espacios generados con JavaScript -->
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Premium Parking | Lavado profesional y cuidado premium para tu auto.
+  </footer>
+
+  <script>
+    const horarios = [
+      "08:00", "09:00", "10:00", "11:00",
+      "12:00", "13:00", "14:00", "15:00",
+      "16:00", "17:00", "17:30", "18:00"
+    ];
+
+    const ocupados = ["09:00", "12:00", "15:00", "17:30"];
+
+    const grid = document.getElementById("horarioGrid");
+
+    horarios.forEach(hora => {
+      const slot = document.createElement("div");
+      slot.textContent = hora;
+
+      if (ocupados.includes(hora)) {
+        slot.className = "slot ocupado";
+      } else {
+        slot.className = "slot libre";
+        slot.addEventListener("click", () => {
+          alert(`Has reservado el lavado a las ${hora}. ¡Gracias por elegir Premium Parking!`);
+        });
+      }
+
+      grid.appendChild(slot);
+    });
+  </script>
+
+</body>
+</html>

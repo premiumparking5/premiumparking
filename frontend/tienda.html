@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PremiumParking | Tienda de accesorios para autos</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #0a0a0a;
+            color: white;
+            text-align: center;
+            padding: 30px 10px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            background-color: #1e1e1e;
+            text-align: center;
+        }
+
+        nav a {
+            display: inline-block;
+            color: #fff;
+            padding: 15px 20px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #444;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            width: 250px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .product-card h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        .product-card p {
+            color: #555;
+            margin: 5px 0;
+        }
+
+        .product-card button {
+            background-color: #0a0a0a;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .product-card button:hover {
+            background-color: #333;
+        }
+
+        footer {
+            background-color: #0a0a0a;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>PremiumParking</h1>
+        <p>Accesorios pequeños para tu auto, estilo premium.</p>
+    </header>
+
+    <nav>
+        <a href="#productos">Productos</a>
+        <a href="#premium">Premium</a>
+        <a href="#como">Como</a>
+        <a href="#nosotros">Nosotros</a>
+    </nav>
+
+    <div class="container" id="productos">
+        <h2>Productos Destacados</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://autopresto.mx/wp-content/uploads/gps-para-auto-gratis-beneficios-y-caracteristicas-1536x1024.jpg" alt="GPS">
+                <h3>GPS</h3>
+                <p>22.000</p>
+                <button onclick="comprar('GPS')">Comprar</button>
+            </div>
+            <div class="product-card">
+                <img src="https://media.falabella.com/falabellaCO/130521063_01/w=1500,h=1500,fit=pad" alt="Carpa">
+                <h3>Carpa Impermeable</h3>
+                <p>29.950</p>
+                <button onclick="comprar('Carpa Impermeable')">Comprar</button>
+            </div>
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/61syqYbhpfL.jpg" alt="Alarma">
+                <h3>Alarma antirobo</h3>
+                <p>89.950</p>
+                <button onclick="comprar('Alarma antirobo')">Comprar</button>
+            </div>
+            <div class="product-card">
+                <img src="https://i.pinimg.com/736x/fa/c1/29/fac12979f759be1c603c06ecf39f603a.jpg" alt="Rines">
+                <h3>Rines de lujo</h3>
+                <p>700.000</p>
+                <button onclick="comprar('Rines de lujo')">Comprar</button>
+            </div>
+            <div class="product-card">
+                <img src="https://www.virtualllantas.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/l/llanta_goodyear_wrangler_workhorse_at_estructura_2_1_22.jpg" alt="Neumáticos">
+                <h3>Neumaticos</h3>
+                <p>99.950</p>
+                <button onclick="comprar('Neumaticos')">Comprar</button>
+            </div>
+            <div class="product-card">
+                <img src="https://asopartes.com/wp-content/uploads/2023/04/kit-de-carretera.jpg" alt="Kit carretera">
+                <h3>Kit de Carretera</h3>
+                <p>200.000</p>
+                <button onclick="comprar('Kit de Carretera')">Comprar</button>
+            </div>
+            <div class="product-card">
+                <img src="https://img.freepik.com/vector-gratis/coleccion-pegatinas-coches_23-2150134073.jpg?semt=ais_items_boosted&w=740" alt="Calcomanías">
+                <h3>Calcomanias</h3>
+                <p>7.000</p>
+                <button onclick="comprar('Calcomanias')">Comprar</button>
+            </div>
+            <div class="product-card">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_909908-MCO83775637434_042025-O.webp" alt="Pantalla">
+                <h3>Pantalla Inteligente Portatil</h3>
+                <p>450.000</p>
+                <button onclick="comprar('Pantalla Inteligente Portatil')">Comprar</button>
+            </div>
+            <div class="product-card">
+                <img src="https://autopla1.b-cdn.net/wp-content/uploads/2020/12/107017_1_ftypph.jpg" alt="Ambientador">
+                <h3>Ambientador</h3>
+                <p>10.000</p>
+                <button onclick="comprar('Ambientador')">Comprar</button>
+            </div>
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/41noiEWedKL._UF894,1000_QL80_.jpg" alt="Muñeco cabezón">
+                <h3>Muñeco con Movimiento de Cabeza</h3>
+                <p>25.000</p>
+                <button onclick="comprar('Muñeco con Movimiento de Cabeza')">Comprar</button>
+            </div>
+            <div class="product-card">
+                <img src="https://img.kwcdn.com/product/Fancyalgo/VirtualModelMatting/619a672616a9616de3db1c4a31c760b1.jpg" alt="Palanca">
+                <h3>Decoracion para Palanca de Cambios</h3>
+                <p>45.950</p>
+                <button onclick="comprar('Decoración para Palanca')">Comprar</button>
+            </div>
+            <div class="product-card">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_804425-CBT79840591210_102024-O.webp" alt="Limpieza">
+                <h3>Kit de Limpieza</h3>
+                <p>59.950</p>
+                <button onclick="comprar('Kit de Limpieza')">Comprar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function comprar(nombreProducto) {
+            alert("Has seleccionado comprar: " + nombreProducto + "\nMétodos de pago disponibles próximamente.");
+        }
+    </script>
+
+</body>
+</html>
