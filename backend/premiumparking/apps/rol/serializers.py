@@ -1,8 +1,5 @@
 from rest_framework import serializers
-from .models import *
-
-class RolSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = Rol
-        fields = ('__all__')
+from django.contrib.auth.models import User
+class LoginSerializer(serializers.Serializer):
+username = serializers.CharField()
+password = serializers.CharField(write_only=True)
